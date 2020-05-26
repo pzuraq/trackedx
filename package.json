@@ -1,0 +1,35 @@
+{
+  "name": "trackedx",
+  "version": "0.0.0",
+  "description": "A full-featured, drop-in replacement for MobX, built with autotracking",
+  "repository": "git@github.com:pzuraq/trackedx.git",
+  "author": "Chris Hewell Garrett",
+  "main": "dist/trackedx.cjs.js",
+  "module": "dist/trackedx.esm.js",
+  "browser": "dist/trackedx.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build"
+  },
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@glimmer/validator": "^0.53.0",
+    "@rollup/plugin-babel": "^5.0.2",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "babel-plugin-transform-node-env-inline": "^0.4.3",
+    "rollup": "^2.10.8",
+    "tracked-deep": "pzuraq/tracked-deep#3b41a7d495748657f4e4fb94822b10925544e757"
+  },
+  "resolutions": {
+    "tracked-deep/**/@glimmer/validator": "^0.53.0"
+  }
+}
